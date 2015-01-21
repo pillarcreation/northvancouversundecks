@@ -1,0 +1,10 @@
+<nav class="navbar">{tag_menugroup}</nav>
+
+<script>
+	// desired class for 1st <ul> tag 
+	var ulTagClass = "nav";
+
+	if ((null !== ulTagClass) && ("" !== ulTagClass)) {
+		document.getElementsByClassName("navbar")[0].getElementsByTagName("ul")[0].className = ulTagClass;
+	}
+</script>

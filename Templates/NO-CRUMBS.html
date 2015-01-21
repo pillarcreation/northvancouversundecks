@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	{module_contentholder,name="General - Head"}
+</head>
+<body>
+	<div class="space30"></div><!-- Top Space -->
+	<div class="content">
+		<div class="container site">
+			<div class="row">
+				<div class="span12">
+					{module_contentholder,name="General - Page Header"}
+					<div class="row">
+						<div class="span12">
+							<h1>{module_pagename}</h1>
+						</div>
+					</div>
+					{tag_pagecontent}
+				</div>
+			</div>
+		</div>
+		{module_contentholder,name="General - Page Footer"}
+		
+		<div class="space30"></div><!-- Bottom Space -->
+	</div>
+	{module_contentholder,name="General - Scripts"}
+</body>
+</html>

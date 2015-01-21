@@ -1,0 +1,21 @@
+<script src="/js/jquery-1.8.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/functions.js"></script>
+<script defer src="/js/jquery.flexslider.js"></script>
+<script> var siteURL = 'http://{module_webapps,0,i,4645375 template="/_settings/site-url"}';</script>
+<script src="/js/scripts.js"></script>
+<script>
+// To add the selected class on the li of navigation elements
+var path = location.pathname.substring(1);
+if (path){ // if there is a value for the varible path
+	
+	/*-- for the primary nav - if path equals the href give the parent a class of selected
+	     example: nav ul li.selected a -*/
+	$('nav.navbar a[href$="' + path + '"]').parent().attr('class', 'active');
+	
+	/*-- for dropdown nav - if path equals the href of the drop down links give the top level link a class of selected
+	     example: nav ul li.selected a -*/
+	$('nav.navbar ul ul a[href$="' + path + '"]').parent().parent().parent().attr('class', 'active');
+	
+};
+</script>

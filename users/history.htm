@@ -1,0 +1,44 @@
+<script type="text/javascript">
+	$(function () {
+		$("#js-messages table:odd, #js-orders table:odd").addClass("odd");
+
+		$(".js-subject a").each(function () {
+			var txt = this.innerHTML;
+
+			txt = txt.replace("/", " - ");
+			this.innerHTML = txt;
+		});
+	});
+</script>
+<h3>Purchases</h3>
+<table width="100%">
+    <tbody>
+        <tr>
+            <th style="text-align: left; width: 15%;">Order #</th>
+            <th style="text-align: left; width: 20%;">Created On<br />
+            </th>
+            <th style="text-align: left; width: 15%;">Amount</th>
+            <th style="text-align: left; width: 30%;">Details</th>
+            <th style="text-align: left; width: 15%;">Status</th>
+        </tr>
+    </tbody>
+</table>
+<div id="js-orders">
+{module_order,a,}
+</div>
+<hr />
+<h3>Cases</h3>
+<table width="100%">
+    <tbody>
+        <tr>
+            <th style="text-align: left; width: 15%;">Document #</th>
+            <th style="text-align: left; width: 20%;">Created On<br />
+            </th>
+            <th style="text-align: left; width: 40%;">Details</th>
+        </tr>
+    </tbody>
+</table>
+<div id="js-messages">
+<div id="js-orders">{module_case,a,}</div>
+</div>
+<hr />

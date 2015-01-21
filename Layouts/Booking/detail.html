@@ -1,0 +1,49 @@
+<div class="row booking-container">
+	<div class="span8">
+		<p><strong>Capacity: </strong><span class="capacity">{tag_capacity}</span> ({tag_percentfull} booked)</p>
+		<h2>Details</h2>
+		{tag_body}
+	</div>
+	<div class="span4">
+		<form name="catwebformform48727" onsubmit="return checkWholeForm48727(this)" action="/FormProcessv2.aspx?WebFormID=10254&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}" method="post" enctype="multipart/form-data" id="catwebformform48727">
+			<div class="form-container">
+				<h2>Booking</h2>
+				<p>&bull; Required</p>
+				<div class="form">
+					<div class="item">
+						<label>First Name</label><br/>
+						<input maxlength="255" name="FirstName" id="FirstName" />&nbsp;&bull;
+					</div>
+					<div class="item">
+						<label>Last Name</label><br/>
+						<input maxlength="255" name="LastName" id="LastName" />&nbsp;&bull;
+					</div>
+					<div class="item">
+						<label>Email</label><br/>
+						<input type="email" maxlength="255" name="EmailAddress" id="EmailAddress"/>&nbsp;&bull;
+					</div>
+					<div class="item">
+						<label>Company</label><br/>
+						<input maxlength="255" name="Company" id="Company" />
+					</div>
+					<div class="item">
+						<label>Work Phone Number</label><br/>
+						<input maxlength="255" name="WorkPhone" id="WorkPhone" />
+					</div>
+					<div class="item">
+						<input class="cat_button" id="catwebformbutton" type="submit" value="Submit" />
+					</div>
+				</div>
+				<div>{module_error}</div>
+						
+			<script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js" ></script>
+			<script type="text/javascript">
+				//<![CDATA[
+				var submitcount48727 = 0;function checkWholeForm48727(theForm){var why = "";if (theForm.FirstName) why += isEmpty(theForm.FirstName.value, "First Name");if (theForm.LastName) why += isEmpty(theForm.LastName.value, "Last Name"); if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if(why != ""){alert(why);return false;}if(submitcount48727 == 0){submitcount48727++;theForm.submit();return false;}else{alert("Form submission is in progress.");return false;}}
+				//]]>
+			</script>
+			</div><!-- END .form-container -->
+		</form>
+	</div>
+	<div class="span12 go-back">{module_referreraddress,,Go Back}</div>
+</div><!-- END .booking-container -->

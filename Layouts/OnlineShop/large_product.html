@@ -1,0 +1,19 @@
+<div class="row shop-product-large">
+<div class="span4">
+<ul>
+    <li class="price"><strong>{tag_saleprice}</strong></li>
+    <li class="instock">In stock: <strong>{tag_instock}</strong></li>
+    <li class="quantity">{tag_addtocartinputfield} {tag_buynow}</li>
+    <li>{tag_addtofavorites}</li>
+</ul>
+<div class="description">{tag_description}</div>
+</div>
+<div class="span8">
+<img alt="" src="{tag_largeimage_path}" />
+<div class="poplets">{tag_poplets}</div>
+</div>
+</div>
+<div class="comment-form">
+<h5>Comments</h5>
+{module_facebookcomments,url="{tag_itemurl_nolink}",moduleTemplateGroup="Default",locale="en_US",posts="2",width="500",colorScheme="light"}
+</div>

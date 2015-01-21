@@ -1,0 +1,53 @@
+<div class="row">
+<div class="span6">
+<div id="form-login">
+<form name="catseczoneform48573" onsubmit="return checkWholeForm48573(this)" method="post" action="/ZoneProcess.aspx?ZoneID=51&amp;Referrer={module_siteUrl,true,true}&amp;OID={module_oid}&amp;OTYPE={module_otype}">
+    <!-- Update Secure Zone ID -->
+    <fieldset>
+    <legend>Returning Customers</legend>
+    <br />
+    <label for="SZUsername">Email</label>
+    <input type="email" maxlength="255" id="SZUsername" name="Username" class="cat_textbox_small" />
+    <label for="SZPassword">Password</label>
+    <input type="password" maxlength="255" id="SZPassword" name="Password" class="cat_textbox_small" /><br />
+    <a href="#" id="btn-password" class="half-bottom">Forgot your password?</a>
+    <label for="RememberMe">
+    <input type="checkbox" id="RememberMe" name="RememberMe" /> Remember Me
+    </label>
+    <input type="submit" value="Sign In" class="btn" />
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+    <script type="text/javascript">
+						//<![CDATA[
+						function checkWholeForm48573(theForm){var why = "";if (theForm.Username) why += isEmpty(theForm.Username.value, "Username");if (theForm.Password) why += isEmpty(theForm.Password.value, "Password");if (why != ""){alert(why);return false;}theForm.submit();return false;}
+						//]]>
+					</script>
+    </fieldset>
+</form>
+</div>
+<div class="row">
+<div style="display: none;" id="form-password">
+<form action="/LostPasswordProcess.aspx" method="post" name="catseczonelpform12264">
+    <fieldset>
+    <legend>Forgot Password?</legend>
+    <p>Enter your email address below and we'll send your password within a few seconds.</p>
+    <label for="SZUsername">Email Address</label>
+    <input type="email" maxlength="255" id="SZUsername" name="Username" class="cat_textbox_small" />
+    <input type="submit" value="Send my password" class="btn" />
+    <p>Nevermind, <a href="#" id="btn-login">send me back to the sign in screen</a></p>
+    </fieldset>
+</form>
+</div>
+</div>
+</div>
+<div class="span6">
+<div id="new-account">
+<p>Save time and stay informed: track your order online, view your order history, create your favorites wishlist, and more!</p>
+<p><button class="btn" id="needCreate" value="Create Account" type="button">Create Account</button></p>
+<div class="hide create-form">
+<!-- Create Account form - Update Form ID -->
+{module_webform,67774}
+<!-- Update Form ID -->
+</div>
+</div>
+</div>
+</div>
